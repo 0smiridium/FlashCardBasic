@@ -1,11 +1,17 @@
-import time
+import tkinter as tk
 
-print("What is the capital of France?, You Have 20 seconds to answer.")
-# Wait for 20 seconds
-time.sleep(20) 
-print("Paris is the capital of France.")
 
-print("What is the capital of the USA?, You Have 20 seconds to answer.")
-# Wait for 20 seconds
-time.sleep(20) 
-print("Washington D.C. is the capital of the USA.")
+def on_click():
+    print("Paris is the capital of France")
+
+
+root = tk.Tk()
+root.title("Capital City Quiz")
+root.geometry("300x200")
+
+
+button = tk.Button(root, text="What is the capital of France?", command=on_click)
+button.pack(pady=50)
+
+
+root.mainloop()
